@@ -19,12 +19,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    exclude '**/RunCucumberTest.class'
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless', 'true')
-}
-
-tasks.register('cucumber', Test) {
-    useJUnitPlatform()
     include '**/RunCucumberTest.class'
     systemProperty 'selenide.headless', System.getProperty('selenide.headless', 'true')
 }
