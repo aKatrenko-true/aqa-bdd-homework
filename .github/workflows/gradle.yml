@@ -14,7 +14,7 @@ jobs:
       - uses: browser-actions/setup-chrome@v1
       - name: Start application
         run: java -jar artifacts/app-ibank-build-for-testers.jar &
+      - name: Make Gradle executable
+        run: chmod +x gradlew
       - name: Run tests
-        run: |
-          chmod +x gradlew
-          ./gradlew test
+        run: ./gradlew test -Dselenide.headless=true --info
