@@ -20,7 +20,7 @@ dependencies {
 test {
     useJUnitPlatform()
     include '**/RunCucumberTest.class'
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless', 'true')
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
 
 java {
